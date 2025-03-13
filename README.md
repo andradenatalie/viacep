@@ -66,6 +66,7 @@ Nessa interface interativa, o usuário poderá:
 # 📡 Arquitetira Hexagonal
 
 O projeto foi estruturado utilizando a Arquitetura Hexagonal (ou Ports and Adapters), dividindo o sistema em três camadas principais:
+
 	•	Domínio: Contém a lógica de negócio e regras principais, sem dependência de frameworks ou detalhes de infraestrutura.
 	•	Aplicação: Coordena a interação entre o domínio e os serviços externos, facilitando a orquestração das operações.
 	•	Infraestrutura: Responsável pela comunicação com serviços externos, como a API do ViaCEP e o banco de dados SQLite.
@@ -75,6 +76,7 @@ Essa abordagem promove maior manutenibilidade, escalabilidade e testabilidade d
 # 📂 Banco de Dados
 
 Os dados consultados na API do ViaCEP são armazenados em um banco SQLite local, permitindo:
+
 	•	Persistência dos dados: Para reduzir chamadas repetitivas à API externa.
 	•	Cache local: Melhor desempenho nas consultas.
 
