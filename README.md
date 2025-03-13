@@ -1,6 +1,9 @@
 # ViaCEP Flask
 Este projeto é uma API desenvolvida em Python com Flask que consulta endereços através da API ViaCEP e armazena os dados obtidos em um banco de dados SQLite local. Além disso, o projeto foi desenvolvido seguindo a Arquitetura Hexagonal, o que facilita a separação de responsabilidades e a manutenção do código.
 
+![image](https://github.com/user-attachments/assets/a8027401-332c-4015-8f2e-25e18b6cc304)
+
+
 # 🚀 Funcionalidades
     •	Consulta de endereços a partir de um CEP.
 	•	Armazenamento e recuperação dos dados em um banco SQLite.
