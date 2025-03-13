@@ -49,6 +49,10 @@ Set-ExecutionPolicy Unrestricted-ScopeProcess
 pip install -r requirements.txt
 ```
 
+```
+python run.py
+```
+
 # 📃 Exemplo de uso da API com Swagger
 
 O projeto integra o Swagger por meio da biblioteca Flasgger, permitindo que o usuário visualize e interaja com a documentação dos endpoints. Após iniciar o servidor, basta acessar a URL:
