@@ -58,6 +58,7 @@ http://localhost:8080/apidocs/#/
 ```
 
 Nessa interface interativa, o usuário poderá:
+
 	•	Visualizar a descrição de cada endpoint.
 	•	Testar os endpoints diretamente pelo navegador.
 	•	Conferir os parâmetros de entrada e as respostas esperadas
