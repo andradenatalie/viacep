@@ -6,7 +6,7 @@ from app.services.endereco_service import (
 
 endereco_bp = Blueprint("endereco", __name__)
 
-"""Camada de aplicação (DomAppain Layer) expõe as APIs REST."""
+"""Camada de aplicação (App Layer) expõe as APIs REST."""
 
 @endereco_bp.route("/endereco", methods=["POST"])
 @swag_from({
