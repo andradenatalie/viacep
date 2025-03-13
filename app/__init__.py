@@ -22,7 +22,7 @@ def create_app():
             "description": "API para gerenciar endereços via CEP",
             "version": "1.0.0"
         },
-        "host": "localhost:8080",  # Alterar se for rodar em outro host
+        "host": "localhost:8080", 
         "basePath": "/",
         "schemes": ["http"]
     }

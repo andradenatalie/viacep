@@ -1,6 +1,7 @@
 import requests
 
 def consultar_cep(cep):
+    """Camada de infraestrtura (Infrastructure Layer) conexão com serviços externos"""
     url = f"https://viacep.com.br/ws/{cep}/json/"
     response = requests.get(url)
     

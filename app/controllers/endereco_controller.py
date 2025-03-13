@@ -6,6 +6,8 @@ from app.services.endereco_service import (
 
 endereco_bp = Blueprint("endereco", __name__)
 
+"""Camada de aplicação (DomAppain Layer) expõe as APIs REST."""
+
 @endereco_bp.route("/endereco", methods=["POST"])
 @swag_from({
     "tags": ["Endereços"],
@@ -19,7 +21,7 @@ endereco_bp = Blueprint("endereco", __name__)
             "schema": {
                 "type": "object",
                 "properties": {
-                    "cep": {"type": "string", "example": "01001000"}
+                    "cep": {"type": "string", "example": "01001-000"}
                 },
                 "required": ["cep"]
             }
@@ -32,6 +34,7 @@ endereco_bp = Blueprint("endereco", __name__)
     }
 })
 def criar_endereco():
+    """Cria o registro do CEP no banco de dados"""
     data = request.json
     response, status = adicionar_endereco(data.get("cep"))
     return jsonify(response), status
@@ -47,15 +50,16 @@ def criar_endereco():
             "in": "path",
             "type": "string",
             "required": True,
-            "example": "01001000"
+            "exemplo": "01001-000"
         }
     ],
     "responses": {
-        "200": {"description": "Endereço encontrado"},
-        "404": {"description": "CEP não encontrado"}
+        "200": {"description": "Quando endereço encontrado"},
+        "404": {"description": "Quando CEP não encontrado"}
     }
 })
 def buscar_endereco(cep):
+    """Busca o registro do CEP no banco de dados"""
     response = obter_endereco(cep)
     status = 200 if "erro" not in response else 404
     return jsonify(response), status
@@ -71,7 +75,7 @@ def buscar_endereco(cep):
             "in": "path",
             "type": "string",
             "required": True,
-            "example": "01001000"
+            "exemplo": "01001-000"
         }
     ],
     "responses": {
@@ -80,6 +84,7 @@ def buscar_endereco(cep):
     }
 })
 def editar_endereco(cep):
+    """Edita o registro do CEP no banco de dados"""
     response = atualizar_endereco(cep)
     status = 200 if "erro" not in response else 404
     return jsonify(response), status
@@ -95,7 +100,7 @@ def editar_endereco(cep):
             "in": "path",
             "type": "string",
             "required": True,
-            "example": "01001000"
+            "examplo": "01001-000"
         }
     ],
     "responses": {
@@ -104,6 +109,7 @@ def editar_endereco(cep):
     }
 })
 def remover_endereco(cep):
+    """Deleta o registro do CEP no banco de dados"""
     response = deletar_endereco(cep)
     status = 200 if "erro" not in response else 404
     return jsonify(response), status

@@ -2,6 +2,8 @@ from app.adapters.database import db
 from app.domain.models import Endereco
 from app.adapters.via_cep import consultar_cep
 
+"""Camada de serviço (Service Layer) contém a lógica de negócio"""
+
 def adicionar_endereco(cep):
     if not cep:
         return {"erro": "CEP não informado"}, 400

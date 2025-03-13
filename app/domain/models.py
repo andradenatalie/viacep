@@ -1,6 +1,7 @@
 from app.adapters.database import db
 
 class Endereco(db.Model):
+    """Camada de domínio (Domain Layer) representa a entidade Endereço"""
     id = db.Column(db.Integer, primary_key=True)
     cep = db.Column(db.String(9), unique=True, nullable=False)
     logradouro = db.Column(db.String(200))
